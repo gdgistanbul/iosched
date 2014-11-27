@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_setup_wifi_after_i_o_start">DevFest Istanbul konferans alanındasınız. WiFi kurulumu yapmak ister misiniz?</string>
+    <string name="question_setup_wifi_before_i_o_start">DevFest Istanbul yaklaşıyor. Daha önceden WiFi kurulumunu yaparak konferansa hazırlık yapın.</string>
+    <string name="welcome_to_google_i_o_app">DevFest Istanbul uygulamasına hoşgeldiniz!</string>
+    <string name="session_calendar_suffix">- DevFest Istanbul ile eklendi</string>
+    <string name="description_setup_wifi_body">Konferans WiFi kurulumunu şimdiden otomatik yapın ve konferansa gittiğinizde her şey hazır olsun.</string>
+</resources>

@@ -53,7 +53,7 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
-            runProguard true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), file('proguard-project.txt')
             signingConfig signingConfigs.release
         }
@@ -70,10 +70,10 @@ android {
     productFlavors { 
         io2014 {
             applicationId = "com.google.samples.apps.iosched"
-            uniqueContentIdentifier = "iosched2014"
+//            uniqueContentIdentifier = "iosched2014"
 
             manifestPlaceholders = [
-                    uniqueContentIdentifier:uniqueContentIdentifier,
+                    uniqueContentIdentifier:"iosched2014",
                     mapsApiKey:""
             ]
 
@@ -105,7 +105,7 @@ android {
             buildConfigField "String", "FEEDBACK_API_KEY", "\"\""
             buildConfigField "String", "FEEDBACK_SURVEY_ID", "\"\""
             buildConfigField "String", "FEEDBACK_URL", "\"\""
-            buildConfigField "String", "UNIQUE_CONTENT_IDENTIFIER", "\""+uniqueContentIdentifier+"\""
+            buildConfigField "String", "UNIQUE_CONTENT_IDENTIFIER", "\"iosched2014\""
             buildConfigField "String", "WIFI_SSID", "\"IO2014\""
             buildConfigField "String", "WIFI_PASSPHRASE", "\"letsdothis\""
 
@@ -123,100 +123,44 @@ android {
                     "        }"
         }
 
-        droidconuk {
-            applicationId = "com.conferenceengineer.android.iosched.event1002"
-            uniqueContentIdentifier = "event1002"
+        devfestist {
+            applicationId = "gdg.df"
+//            uniqueContentIdentifier = "event1208"
             manifestPlaceholders = [
-                    uniqueContentIdentifier:uniqueContentIdentifier,
-                    mapsApiKey:droidconuk14_android_maps_api_key
+                    uniqueContentIdentifier:"14",
+                    mapsApiKey:devfestist14_android_maps_api_key
             ]
 
             buildConfigField "boolean", "HAS_VIDEO_LIBRARY", "false"
-            buildConfigField "boolean", "SUPPORTS_PEER_BADGE_SCANNING", "false"
+            buildConfigField "boolean", "SUPPORTS_PEER_BADGE_SCANNING", "true"
             buildConfigField "boolean", "SUPPORTS_REMOTE_VIEWING", "false"
             buildConfigField "boolean", "USE_EXTERNAL_MAPS", "true"
 
-            buildConfigField "double", "VENUE_LATITUDE", "51.535555"
-            buildConfigField "double", "VENUE_LONGITUDE", "-0.1047969"
-            buildConfigField "double", "VENUE_CAMERA_LATITUDE", "51.535556"
-            buildConfigField "double", "VENUE_CAMERA_LONGITUDE", "-0.104797"
+            buildConfigField "double", "VENUE_LATITUDE", "41.02385"
+            buildConfigField "double", "VENUE_LONGITUDE", "29.031556"
+            buildConfigField "double", "VENUE_CAMERA_LATITUDE", "41.0300"
+            buildConfigField "double", "VENUE_CAMERA_LONGITUDE", "29.0316"
 
-            buildConfigField "String", "CONFERENCE_NAME", "\"Droidcon London 2014\""
-            buildConfigField "String", "CONFERENCE_DATA_MANIFEST_URL", "\""+droidconuk14_android_manifest+"\""
-            buildConfigField "String", "OAUTH_APP_NAME", "\"DroidconUK2014-2014\""
-            buildConfigField "String", "OAUTH_API_KEY", "\""+droidconuk14_android_oauth_api_key+"\""
-            buildConfigField "String", "GCM_API_KEY", "\""+droidconuk14_gcm_api_key+"\""
-            buildConfigField "String", "GCM_SENDER_ID", "\""+droidconuk14_gcm_sender_id+"\""
-            buildConfigField "String", "GCM_URL", "\""+droidconuk14_gcm_url+"\""
+            buildConfigField "String", "CONFERENCE_NAME", "\"GDG DevFest Istanbul 2014\""
+            buildConfigField "String", "CONFERENCE_DATA_MANIFEST_URL", "\""+devfestist14_android_manifest+"\""
+            buildConfigField "String", "OAUTH_APP_NAME", "\"devfesttr14\""
+            buildConfigField "String", "OAUTH_API_KEY", "\""+devfestist14_android_oauth_api_key+"\""
+            buildConfigField "String", "GCM_API_KEY", "\""+devfestist14_gcm_api_key+"\""
+            buildConfigField "String", "GCM_SENDER_ID", "\""+devfestist14_gcm_sender_id+"\""
+            buildConfigField "String", "GCM_URL", "\""+devfestist14_gcm_url+"\""
 
-            buildConfigField "String", "BOOTSTRAP_DATA_TIMESTAMP", "\"Fri, 24 Oct 2014 09:00:00 GMT\""
-            buildConfigField "String", "CONFERENCE_FEEDBACK_URL", "null"
+            buildConfigField "String", "BOOTSTRAP_DATA_TIMESTAMP", "\"Tue, 28 Nov 2014 11:45:00 GMT\""
+            buildConfigField "String", "CONFERENCE_FEEDBACK_URL", "\""+devfestist14_conference_feedback_url+"\""
             buildConfigField "String", "CONFERENCE_GAME_PACKAGE_NAME", "\"\""
-            buildConfigField "String", "CONFERENCE_HASHTAG", "\"#droidconUK\""
-            buildConfigField "String", "CONFERENCE_HASHTAG_PREFIX", "\"#dcuk\""
-            buildConfigField "String", "CONFERENCE_TIMEZONE", "\"Europe/London\""
-            buildConfigField "String", "FEEDBACK_API_CODE", "\""+droidconuk14_feedback_api_code+"\""
-            buildConfigField "String", "FEEDBACK_API_KEY", "\""+droidconuk14_feedback_api_key+"\""
-            buildConfigField "String", "FEEDBACK_SURVEY_ID", "\""+droidconuk14_feedback_survey_id+"\""
-            buildConfigField "String", "FEEDBACK_URL", "\""+droidconuk14_feedback_url+"\""
-            buildConfigField "String", "UNIQUE_CONTENT_IDENTIFIER", "\""+uniqueContentIdentifier+"\""
-            buildConfigField "String", "WIFI_SSID", "\"droidconuk\""
-            buildConfigField "String", "WIFI_PASSPHRASE", "\"WhatTheL50\""
-
-            buildConfigField "Class<? extends android.app.Fragment>", "SOCIAL_FRAGMENT_CLASS",
-                             "com.google.samples.apps.iosched.ui.TwitterSocialFragment.class"
-
-            buildConfigField "long[][]", "CONFERENCE_DAYS", "new long[][] {\n" +
-                    "            {  " +
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-10-30T08:00:00.000Z\"),\n" +
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-10-31T07:59:59.999Z\")\n" +
-                    "            }, {\n" +
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-10-31T08:00:00.000Z\"),\n"+
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-01T07:59:59.999Z\")\n"+
-                    "            },\n" +
-                    "        }"
-
-
-        }
-
-        droidconnl {
-            applicationId = "com.conferenceengineer.android.iosched.event1208"
-            uniqueContentIdentifier = "event1208"
-            manifestPlaceholders = [
-                    uniqueContentIdentifier:uniqueContentIdentifier,
-                    mapsApiKey:droidconnl14_android_maps_api_key
-            ]
-
-            buildConfigField "boolean", "HAS_VIDEO_LIBRARY", "false"
-            buildConfigField "boolean", "SUPPORTS_PEER_BADGE_SCANNING", "false"
-            buildConfigField "boolean", "SUPPORTS_REMOTE_VIEWING", "false"
-            buildConfigField "boolean", "USE_EXTERNAL_MAPS", "true"
-
-            buildConfigField "double", "VENUE_LATITUDE", "52.349927"
-            buildConfigField "double", "VENUE_LONGITUDE", "4.918538"
-            buildConfigField "double", "VENUE_CAMERA_LATITUDE", "52.3500"
-            buildConfigField "double", "VENUE_CAMERA_LONGITUDE", "4.9186"
-
-            buildConfigField "String", "CONFERENCE_NAME", "\"droidconNL 2014\""
-            buildConfigField "String", "CONFERENCE_DATA_MANIFEST_URL", "\""+droidconnl14_android_manifest+"\""
-            buildConfigField "String", "OAUTH_APP_NAME", "\"droidconNL-2014\""
-            buildConfigField "String", "OAUTH_API_KEY", "\""+droidconnl14_android_oauth_api_key+"\""
-            buildConfigField "String", "GCM_API_KEY", "\""+droidconnl14_gcm_api_key+"\""
-            buildConfigField "String", "GCM_SENDER_ID", "\""+droidconnl14_gcm_sender_id+"\""
-            buildConfigField "String", "GCM_URL", "\""+droidconnl14_gcm_url+"\""
-
-            buildConfigField "String", "BOOTSTRAP_DATA_TIMESTAMP", "\"Tue, 14 Nov 2014 11:45:00 GMT\""
-            buildConfigField "String", "CONFERENCE_FEEDBACK_URL", "\""+droidconnl14_conference_feedback_url+"\""
-            buildConfigField "String", "CONFERENCE_GAME_PACKAGE_NAME", "\"\""
-            buildConfigField "String", "CONFERENCE_HASHTAG", "\"#droidconNL\""
-            buildConfigField "String", "CONFERENCE_HASHTAG_PREFIX", "\"#dcnl\""
-            buildConfigField "String", "CONFERENCE_TIMEZONE", "\"Europe/Amsterdam\""
-            buildConfigField "String", "FEEDBACK_API_CODE", "\""+droidconnl14_feedback_api_code+"\""
-            buildConfigField "String", "FEEDBACK_API_KEY", "\""+droidconnl14_feedback_api_key+"\""
-            buildConfigField "String", "FEEDBACK_SURVEY_ID", "\""+droidconnl14_feedback_survey_id+"\""
-            buildConfigField "String", "FEEDBACK_URL", "\""+droidconnl14_feedback_url+"\""
-            buildConfigField "String", "UNIQUE_CONTENT_IDENTIFIER", "\""+uniqueContentIdentifier+"\""
-            buildConfigField "String", "WIFI_SSID", "\"Casa400-Hotel\""
+            buildConfigField "String", "CONFERENCE_HASHTAG", "\"#gdg #devfest\""
+            buildConfigField "String", "CONFERENCE_HASHTAG_PREFIX", "\"#gdg #devfest\""
+            buildConfigField "String", "CONFERENCE_TIMEZONE", "\"Europe/Istanbul\""
+            buildConfigField "String", "FEEDBACK_API_CODE", "\""+devfestist14_feedback_api_code+"\""
+            buildConfigField "String", "FEEDBACK_API_KEY", "\""+devfestist14_feedback_api_key+"\""
+            buildConfigField "String", "FEEDBACK_SURVEY_ID", "\""+devfestist14_feedback_survey_id+"\""
+            buildConfigField "String", "FEEDBACK_URL", "\""+devfestist14_feedback_url+"\""
+            buildConfigField "String", "UNIQUE_CONTENT_IDENTIFIER", "\"14\""
+            buildConfigField "String", "WIFI_SSID", "null"
             buildConfigField "String", "WIFI_PASSPHRASE", "null"
 
             buildConfigField "Class<? extends android.app.Fragment>", "SOCIAL_FRAGMENT_CLASS",
@@ -224,11 +168,8 @@ android {
 
             buildConfigField "long[][]", "CONFERENCE_DAYS", "new long[][] {\n" +
                     "            {  " +
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-24T08:00:00.000Z\"),\n" +
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-25T07:59:59.999Z\")\n" +
-                    "            }, {\n" +
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-25T08:00:00.000Z\"),\n"+
-                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-26T07:59:59.999Z\")\n"+
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-12-06T08:00:00.000Z\"),\n" +
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-12-06T19:59:59.999Z\")\n" +
                     "            },\n" +
                     "        }"
 

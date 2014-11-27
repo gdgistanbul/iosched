@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GDG DevFest Istanbul 2014</string>
+    <string name="question_setup_wifi_after_i_o_start">DevFest Istanbul is here! Would you like to configure the conference WiFi now?</string>
+    <string name="question_setup_wifi_before_i_o_start">DevFest Istanbul is coming up! Would you like to configure the conference WiFi now?</string>
+    <string name="welcome_to_google_i_o_app">Welcome to the DevFest Istanbul app!</string>
+    <string name="experts_directory_header_body">These are the people we consider to have worked on high profile successful projects, or have helped others in an outstanding way.</string>
+    <string name="experts_directory_header_title">Who are the Experts?</string>
+    <string name="map_label_venue" translatable="false">Baglarbasi Kultur Merkezi</string>
+    <string name="session_calendar_suffix">- added by DevFest Istanbul Android app</string>
+    <string name="description_setup_wifi_body"><![CDATA[
+        Since you\'re attending in person, we can set up this device to access the conference Wi-Fi network.
+        By configuring your Wi-Fi now, you\'ll help prevent network congestion.
+    ]]></string>
+</resources>
