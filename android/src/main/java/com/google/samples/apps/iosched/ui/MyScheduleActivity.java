@@ -87,7 +87,6 @@ public class MyScheduleActivity extends BaseActivity implements MyScheduleFragme
     // View pager and adapter (for narrow mode)
     ViewPager mViewPager = null;
     OurViewPagerAdapter mViewPagerAdapter = null;
-    SlidingTabLayout mSlidingTabLayout = null;
     ScrollView mScrollViewWide;
 
     // Login failed butter bar
@@ -161,44 +160,11 @@ public class MyScheduleActivity extends BaseActivity implements MyScheduleFragme
                 secondDayHeaderView.setText(getDayName(1));
             }
         } else {
-            // it's PagerAdapter set.
-            mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
-            mSlidingTabLayout.setCustomTabView(R.layout.tab_indicator, android.R.id.text1);
 
-            setSlidingTabLayoutContentDescriptions();
-
-            Resources res = getResources();
-            mSlidingTabLayout.setSelectedIndicatorColors(res.getColor(R.color.tab_selected_strip));
-            mSlidingTabLayout.setDistributeEvenly(true);
-            mSlidingTabLayout.setViewPager(mViewPager);
         }
 
         mButterBar = findViewById(R.id.butter_bar);
         removeLoginFailed();
-
-        if (mSlidingTabLayout != null) {
-            mSlidingTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                @Override
-                public void onPageScrolled(int position, float positionOffset,
-                        int positionOffsetPixels) {
-
-                }
-
-                @Override
-                public void onPageSelected(int position) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                        mSlidingTabLayout.announceForAccessibility(
-                                getString(R.string.my_schedule_page_desc_a11y,
-                                        getDayName(position)));
-                    }
-                }
-
-                @Override
-                public void onPageScrollStateChanged(int state) {
-                    enableDisableSwipeRefresh(state == ViewPager.SCROLL_STATE_IDLE);
-                }
-            });
-        }
 
         overridePendingTransition(0, 0);
         addDataObservers();
@@ -238,13 +204,6 @@ public class MyScheduleActivity extends BaseActivity implements MyScheduleFragme
             return TimeUtils.formatHumanFriendlyShortDate(this, timestamp);
         } else {
             return "";
-        }
-    }
-
-    private void setSlidingTabLayoutContentDescriptions() {
-        for (int i = 0; i < Config.CONFERENCE_DAYS.length; i++) {
-            mSlidingTabLayout.setContentDescription(i,
-                    getString(R.string.my_schedule_tab_desc_a11y, getDayName(i)));
         }
     }
 

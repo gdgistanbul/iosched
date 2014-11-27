@@ -37,11 +37,6 @@
 
             <include layout="@layout/toolbar_actionbar" />
 
-            <com.google.samples.apps.iosched.ui.widget.SlidingTabLayout
-                android:background="@color/tab_background"
-                android:id="@+id/sliding_tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <com.google.samples.apps.iosched.ui.widget.MultiSwipeRefreshLayout
