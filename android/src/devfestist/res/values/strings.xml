@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GDG DevFest Istanbul 2014</string>
+    <string name="app_name">DevFest Istanbul</string>
     <string name="question_setup_wifi_after_i_o_start">DevFest Istanbul is here! Would you like to configure the conference WiFi now?</string>
     <string name="question_setup_wifi_before_i_o_start">DevFest Istanbul is coming up! Would you like to configure the conference WiFi now?</string>
     <string name="welcome_to_google_i_o_app">Welcome to the DevFest Istanbul app!</string>
