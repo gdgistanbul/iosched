@@ -261,7 +261,7 @@ public class SessionAlarmService extends IntentService
                 SessionAlarmService.class);
         // Setting data to ensure intent's uniqueness for different session start times.
         notifIntent.setData(
-                new Uri.Builder().authority("com.google.samples.apps.iosched")
+                new Uri.Builder().authority(BuildConfig.PACKAGE_NAME)
                         .path(String.valueOf(sessionStart)).build()
         );
         notifIntent.putExtra(SessionAlarmService.EXTRA_SESSION_START, sessionStart);

@@ -79,7 +79,7 @@
         android:logo="@drawable/actionbar_logo"
         android:theme="@style/Theme.IOSched"
         android:hardwareAccelerated="true"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:supportsRtl="true">
 
         <!-- Google Play Services -->

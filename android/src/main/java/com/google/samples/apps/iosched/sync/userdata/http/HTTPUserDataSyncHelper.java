@@ -148,6 +148,8 @@ public class HTTPUserDataSyncHelper extends AbstractUserDataSyncHelper {
             return true;
         } catch (IOException e) {
             handleException(e);
+
+            AccountUtils.refreshAuthToken(mContext);
         }
         return false;
     }
