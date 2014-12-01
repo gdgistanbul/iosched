@@ -182,8 +182,7 @@ public class PrefUtils  {
     }
 
     public static boolean isTosAccepted(final Context context) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        return sp.getBoolean(PREF_TOS_ACCEPTED, false);
+        return true;
     }
 
     public static void markTosAccepted(final Context context) {
