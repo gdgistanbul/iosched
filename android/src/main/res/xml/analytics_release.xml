@@ -16,8 +16,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="TypographyDashes">
     <!-- Replace placeholder GA tracking Id with a real one. -->
-    <string name="ga_trackingId">UA-22236056-2</string>
-    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <string name="ga_trackingId">UA-41931868-2</string>
+    <bool name="ga_reportUncaughtExceptions">false</bool>
     <integer name="ga_sessionTimeout">300</integer>
 
     <!-- 1800 seconds is 30 minutes, which is the default.

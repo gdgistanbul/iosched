@@ -243,16 +243,10 @@ afterEvaluate { project ->
                     exclude "com/google/ads/**"
                     exclude "com/google/android/gms/games/**"
                     exclude "com/google/android/gms/panorama/**"
-                    exclude "com/google/android/gms/ads/**"
                     exclude "com/google/android/gms/wallet/**"
 
                     exclude "com/google/android/gms/fitness/**"
                     exclude "com/google/android/gms/cast/**"
-                    exclude "com/google/android/gms/ads/doubleclick/**"
-                    exclude "com/google/android/gms/ads/mediation/**"
-                    exclude "com/google/android/gms/ads/purchase/**"
-                    exclude "com/google/android/gms/ads/search/**"
-                    exclude "com/google/android/gms/analytics/ecommerce/**"
                     exclude "com/google/android/gms/common/images/**"
                 }
             }.execute()

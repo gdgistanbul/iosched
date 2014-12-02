@@ -17,7 +17,6 @@
 package com.google.samples.apps.iosched.ui;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Paint;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
@@ -35,7 +34,6 @@ import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.crashlytics.android.Crashlytics;
 import com.google.samples.apps.iosched.BuildConfig;
 import com.google.samples.apps.iosched.Config;
 import com.google.samples.apps.iosched.R;
@@ -47,11 +45,13 @@ import com.google.samples.apps.iosched.util.AnalyticsManager;
 import com.google.samples.apps.iosched.util.PrefUtils;
 import com.google.samples.apps.iosched.util.UIUtils;
 
-import io.fabric.sdk.android.Fabric;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.google.samples.apps.iosched.util.LogUtils.*;
+import static com.google.samples.apps.iosched.util.LogUtils.LOGD;
+import static com.google.samples.apps.iosched.util.LogUtils.LOGE;
+import static com.google.samples.apps.iosched.util.LogUtils.LOGW;
+import static com.google.samples.apps.iosched.util.LogUtils.makeLogTag;
 
 public class BrowseSessionsActivity extends BaseActivity implements SessionsFragment.Callbacks {
     private static final String TAG = makeLogTag(BrowseSessionsActivity.class);
@@ -92,7 +92,6 @@ public class BrowseSessionsActivity extends BaseActivity implements SessionsFrag
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
 
         setContentView(R.layout.activity_browse_sessions);
 
