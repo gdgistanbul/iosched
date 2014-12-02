@@ -94,19 +94,19 @@ public class SettingsActivity extends BaseActivity {
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            if (PrefUtils.PREF_SYNC_CALENDAR.equals(key)) {
-                Intent intent;
-                if (PrefUtils.shouldSyncCalendar(getActivity())) {
-                    // Add all calendar entries
-                    intent = new Intent(SessionCalendarService.ACTION_UPDATE_ALL_SESSIONS_CALENDAR);
-                } else {
-                    // Remove all calendar entries
-                    intent = new Intent(SessionCalendarService.ACTION_CLEAR_ALL_SESSIONS_CALENDAR);
-                }
-
-                intent.setClass(getActivity(), SessionCalendarService.class);
-                getActivity().startService(intent);
-            }
+//            if (PrefUtils.PREF_SYNC_CALENDAR.equals(key)) {
+//                Intent intent;
+//                if (PrefUtils.shouldSyncCalendar(getActivity())) {
+//                    // Add all calendar entries
+//                    intent = new Intent(SessionCalendarService.ACTION_UPDATE_ALL_SESSIONS_CALENDAR);
+//                } else {
+//                    // Remove all calendar entries
+//                    intent = new Intent(SessionCalendarService.ACTION_CLEAR_ALL_SESSIONS_CALENDAR);
+//                }
+//
+//                intent.setClass(getActivity(), SessionCalendarService.class);
+//                getActivity().startService(intent);
+//            }
         }
     }
 }

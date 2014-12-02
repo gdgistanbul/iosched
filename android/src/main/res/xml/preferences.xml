@@ -28,11 +28,11 @@
         android:summary="@string/pref_analytics_enabled_description"
         android:defaultValue="true" />
 
-    <CheckBoxPreference
-        android:key="pref_sync_calendar"
-        android:title="@string/pref_sync_with_calendar_title"
-        android:summary="@string/pref_sync_with_calendar_description"
-        android:defaultValue="false" />
+    <!--<CheckBoxPreference-->
+        <!--android:key="pref_sync_calendar"-->
+        <!--android:title="@string/pref_sync_with_calendar_title"-->
+        <!--android:summary="@string/pref_sync_with_calendar_description"-->
+        <!--android:defaultValue="false" />-->
 
     <CheckBoxPreference
         android:key="pref_show_session_reminders"
