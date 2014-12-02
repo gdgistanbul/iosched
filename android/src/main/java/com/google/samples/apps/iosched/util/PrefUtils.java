@@ -127,6 +127,8 @@ public class PrefUtils  {
     }
 
     public static boolean isAttendeeAtVenue(final Context context) {
+        if(!BuildConfig.SUPPORTS_REMOTE_VIEWING)
+            return true;
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         return sp.getBoolean(PREF_ATTENDEE_AT_VENUE, true);
     }
