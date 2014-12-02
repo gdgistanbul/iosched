@@ -371,6 +371,7 @@
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
         </service>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="05f8945f712d0bfd840af6beaeb79b822aded250"/>
 
     </application>
 </manifest>
