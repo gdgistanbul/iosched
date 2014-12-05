@@ -503,7 +503,7 @@
     <string name="title_my_schedule">Programım</string>
 
     <!-- Title of the People I've Met screen, that shows a list of people with whom the user has exchanged contact information during the conference [CHAR_LIMIT=20]. -->
-    <string name="title_people_ive_met">Tanışdığım kişiler</string>
+    <string name="title_people_ive_met">Tanıştığım Kişiler</string>
 
     <!-- Map breadcrumb text for navigating company showcase entries -->
     <string name="title_sandbox_detail">Şirket bilgisi</string>

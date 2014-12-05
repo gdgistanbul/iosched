@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="question_setup_wifi_after_i_o_start">DevFest Istanbul\'dasınız. WiFi ağına bağlanmak ister misiniz?</string>
-    <string name="question_setup_wifi_before_i_o_start">DevFest Istanbul yaklaşıyor. Konferanstan önce WiFi ağını eklemek ister misiniz?</string>
-    <string name="welcome_to_google_i_o_app">DevFest Istanbul uygulamasına hoş geldiniz!</string>
-</resources>
